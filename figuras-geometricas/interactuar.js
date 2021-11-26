@@ -106,6 +106,8 @@ function calcularAreaTriangulo() {
     const input_3 = document.getElementById('inputLadoTriangulo2');
     const lado_3 = Number(input_3.value);
 
+    //validando que no este vacio. 
+    
     const area = areaTriangulo(lado_1, lado_2, lado_3);
 
     alert(`El area del triangulo es ${area}`);

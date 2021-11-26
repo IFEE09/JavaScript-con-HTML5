@@ -5,6 +5,8 @@ input[type=number]::-webkit-inner-spin-button {
 body {
     background: linear-gradient(#e66465, #9198e5);
     font-family: 'Courier New', Courier, monospace;
+    background-size: cover;
+    
 }
 
 header {
@@ -19,30 +21,33 @@ main {
 }
 
 .bg-cuadrado {
-    margin: 50px;
+    margin: 3rem;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
-    width: 700px;
+    width: 36rem;
     text-align: center;
+    display: block;
 }
 
 .bg-triangulo {
-    margin: 50px;
+    margin: 3rem;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 700px;
+    width: 36rem;
     text-align: center;
+    display: block;
 }
 
 .bg-circulo {
-    margin: 50px;
+    margin: 3rem;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 700px;
+    width: 36rem;
     text-align: center;
+    display: block;
 }
 button {
     padding: 10px;
@@ -60,6 +65,7 @@ button:hover {
     background-color: white;
     color: #9198e5;
     cursor: pointer;
+    border: solid 1px #9198e5;
 }
 
 input {
