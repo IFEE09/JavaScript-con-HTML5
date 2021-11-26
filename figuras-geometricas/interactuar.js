@@ -1,3 +1,4 @@
+//console.group('Cuadrados');
 //condigo de los cuadrados. 
 const ladoCuadrado1 = 5;
 
@@ -23,14 +24,11 @@ function perimetroTriangulo(lado1, lado2, lado3){
     return lado1 + lado2 + lado3;
 }
 
-function alturaTriangulo(base, ladoChico) {
-    return ((base)**2 + (ladoChico)**2)**(1/2);
-}
-
-const alturaTriangulo_ = alturaTriangulo(baseTriangulo1, ladoTriangulo1);
-
-function areaTriangulo(altura, base) { 
-    return (base * altura)/2;
+function areaTriangulo(lado1, lado2, lado3) { 
+    //aqui se aplica la formula de heron
+    const s  = (lado1 + lado2 + lado3) / 2;
+    const area = Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3));
+    return area;
 }
 
 /* console.log(`Los lados del triangulo son: ${ladoTriangulo1}, ${ladoTriangulo2} y ${baseTriangulo1}`);
@@ -83,5 +81,36 @@ function calcularAreaCuadrado() {
     alert(`El area del cuadrado es ${area}`);
 
 }
+
+function calcularPerimetroTriangulo() {
+
+    const input_1 = document.getElementById('inputLadoTriangulo1');
+    const lado_1 = Number(input_1.value);
+    const input_2 = document.getElementById('inputLadoTriangulo2');
+    const lado_2 = Number(input_2.value);
+    const input_3 = document.getElementById('inputLadoTriangulo2');
+    const lado_3 = Number(input_3.value);
+
+    const perimetro = perimetroTriangulo(lado_1, lado_2, lado_3);
+
+    alert(`El perimetro del triangulo es ${perimetro}`)
+
+}
+
+function calcularAreaTriangulo() {
+
+    const input_1 = document.getElementById('inputLadoTriangulo1');
+    const lado_1 = Number(input_1.value);
+    const input_2 = document.getElementById('inputLadoTriangulo2');
+    const lado_2 = Number(input_2.value);
+    const input_3 = document.getElementById('inputLadoTriangulo2');
+    const lado_3 = Number(input_3.value);
+
+    const area = areaTriangulo(lado_1, lado_2, lado_3);
+
+    alert(`El area del triangulo es ${area}`);
+
+}
+
 
 
