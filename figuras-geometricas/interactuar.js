@@ -112,5 +112,29 @@ function calcularAreaTriangulo() {
 
 }
 
+function calcularPerimetroCirculo() {
+
+    const input_Radio = document.getElementById('inputRadioCirculo');
+    const radio = Number(input_Radio.value);
+
+    const perimetro = perimetroCirculo(radio);
+
+    alert(`El perimetro del circulo es ${perimetro}`)
+
+}
+
+function calcularAreaCirculo() {
+
+    const input_Radio = document.getElementById('inputRadioCirculo');
+    const radio = Number(input_Radio.value);
+
+    const area = areaCirculo(radio);
+
+    alert(`El area del circulo es ${area}`);
+
+}
+
+
+
 
 
