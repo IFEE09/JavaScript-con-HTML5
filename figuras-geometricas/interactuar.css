@@ -1,3 +1,71 @@
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+body {
+    background: linear-gradient(#e66465, #9198e5);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.bg-cuadrado {
+    margin: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+}
+
+.bg-triangulo {
+    margin: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+}
+
+.bg-circulo {
+    margin: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+}
+button {
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #9198e5;
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 0.7rem;
+    width: 200px;
+}
+
+button:hover {
+    background-color: white;
+    color: #9198e5;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin-top: 0.7rem;
+    border: solid 1px #9198e5;
+}

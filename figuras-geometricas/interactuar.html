@@ -11,32 +11,60 @@
     
     <header>
         <h1>Figuras geometricas</h1>
-        <p>Interactuar</p>
     </header>
 
     <main>
-        <h2>Calcula el area y perimetro de un cuadrado</h2>
-        <form action="">
-            <input id="inputCuadrado" type="number" placeholder="Ingrese el lado del cuadrado">
-            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
-            <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
-        </form>
-
-        <h2>Calcula el area y perimetro de un triangulo</h2>
-        <form action="">
-            <input id="inputLadoTriangulo1" type="number" placeholder="Ingrese el lado 1 del triangulo">
-            <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 2 del triangulo">
-            <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 3 del triangulo">
-            <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
-            <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
-        </form>
-
-        <h2>Calcula el area y perimetro de un circulo</h2>
-        <form action="">
-            <input id="inputRadioCirculo" type="number" placeholder="Ingrese el radio del circulo">
-            <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
-            <button type="button" onclick="calcularAreaCirculo()">Calcular el area</button>
-        </form>
+        <div class="bg-cuadrado">
+            <h2>Calcula el area y perimetro de un cuadrado</h2>
+            <form action="">
+                <div>
+                    <input id="inputCuadrado" type="number" placeholder="Ingrese el lado del cuadrado" required>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="bg-triangulo">
+            <h2>Calcula el area y perimetro de un triangulo</h2>
+            <form action="">
+                <div>
+                    <input id="inputLadoTriangulo1" type="number" placeholder="Ingrese el lado 1 del triangulo" required>
+                </div>
+                <div>
+                    <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 2 del triangulo" required>
+                </div>
+                <div>
+                    <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 3 del triangulo" required>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="bg-circulo">
+            <h2>Calcula el area y perimetro de un circulo</h2>
+            <form action="">
+                <div>
+                    <input id="inputRadioCirculo" type="number" placeholder="Ingrese el radio del circulo" required>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
+                </div>
+                <div>
+                    <button type="button" onclick="calcularAreaCirculo()">Calcular el area</button>
+                </div>
+            </form>
+        </div>
+        
     </main>
 
     <script src="./interactuar.js"></script>
