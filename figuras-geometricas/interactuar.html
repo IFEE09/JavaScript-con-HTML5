@@ -1,0 +1,37 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./interactuar.css">
+    <title>interactuar</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Figuras geometricas</h1>
+        <p>Interactuar</p>
+    </header>
+
+    <main>
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
+        <form action="">
+            <input id="inputCuadrado" type="number" placeholder="Ingrese el lado del cuadrado">
+            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+            <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+        </form>
+
+        <h2>Calcula el area y perimetro de un triangulo</h2>
+        <form action="">
+            <input id="inputLadoTriangulo1" type="number" placeholder="Ingrese el lado 1 del triangulo">
+            <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 2 del triangulo">
+            <input id="inputLadoTriangulo2" type="number" placeholder="Ingrese el lado 3 del triangulo">
+            <button type="button" onclick="calculaPerimetroCirculo()">Calcular el perimetro</button>
+            <button type="button" onclick="calculaAreaCirculo()">Calcular el area</button>
+        </form>
+    </main>
+    
+    <script src="./interactuar.js"></script>
+</body>
+</html>
