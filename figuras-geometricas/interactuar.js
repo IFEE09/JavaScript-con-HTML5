@@ -37,7 +37,6 @@ console.log(`El area del triangulo es ${areaTriangulo(alturaTriangulo_, ladoTria
 console.groupEnd(); */
 
 //codigos de los circulos
-
 const radioCirculo1 = 4;
 
 function diametroCirculo(radio){
@@ -63,11 +62,17 @@ console.groupEnd(); */
 
 //aqui interactuamos con el html
 function calcularPerimetroCuadrado() {
+
     const input = document.getElementById('inputCuadrado');
     const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
-    alert(`El perimetro del cuadrado es ${perimetro}`);
+    if(value === 0){
+        alert(`No puede estar vacio este campo`);
+        query_Cuadrado.style.setPropertty('border', 'solid 1px red!important');
+    } else {
+        const perimetro = perimetroCuadrado(value);
+        alert(`El perimetro del cuadrado es ${perimetro}`);
+    }
     
 }
 
