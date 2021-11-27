@@ -167,8 +167,3 @@ function calcularAreaCirculo() {
     }
 
 }
-
-
-
-
-
