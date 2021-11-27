@@ -60,15 +60,16 @@ console.log(`El perimetro de nuestro circulo es ${perimetroCirculo(diametroCircu
 console.log(`El area del circulo es ${areaCirculo(radioCirculo1)}`);
 console.groupEnd(); */
 
-//aqui interactuamos con el html
+//----------------aqui interactuamos con el html -------------------------------------------------
+
 function calcularPerimetroCuadrado() {
 
     const input = document.getElementById('inputCuadrado');
-    const value = input.value;
+    const value = input.value;  
 
-    if(value === 0){
-        alert(`No puede estar vacio este campo`);
-        query_Cuadrado.style.setPropertty('border', 'solid 1px red!important');
+    //validando que los campos no esten vacios. 
+    if(value === ""){
+        alert(`El campo del cuadrado no puede estar vacio`);
     } else {
         const perimetro = perimetroCuadrado(value);
         alert(`El perimetro del cuadrado es ${perimetro}`);
@@ -81,63 +82,90 @@ function calcularAreaCuadrado() {
     const input = document.getElementById('inputCuadrado');
     const value = input.value;
 
-    const area = areaCuadrado(value);
-    
-    alert(`El area del cuadrado es ${area}`);
+    //validando que los campos no esten vacios. 
+    if(value === "") {
+        alert(`El campo del cuadrado no puede estar vacio`)
+    } else {
+        Number(value);
+        const area = areaCuadrado(value);
+        alert(`El area del cuadrado es ${area}`);
+    }
 
 }
 
 function calcularPerimetroTriangulo() {
 
     const input_1 = document.getElementById('inputLadoTriangulo1');
-    const lado_1 = Number(input_1.value);
+    const lado_1 = input_1.value;
     const input_2 = document.getElementById('inputLadoTriangulo2');
-    const lado_2 = Number(input_2.value);
-    const input_3 = document.getElementById('inputLadoTriangulo2');
-    const lado_3 = Number(input_3.value);
+    const lado_2 = input_2.value;
+    const input_3 = document.getElementById('inputLadoTriangulo3');
+    const lado_3 = input_3.value;
+    
+    typeof(lado_1);
 
-    const perimetro = perimetroTriangulo(lado_1, lado_2, lado_3);
-
-    alert(`El perimetro del triangulo es ${perimetro}`)
+    //Validando que los campos no esten vacios
+    if (lado_1 === "" || lado_2 === "" || lado_3 === "") {
+        alert(`Todos los campos deben de contener un numero`);
+    } else {
+        Number(lado_1);
+        Number(lado_2);
+        Number(lado_3);
+        const perimetro = perimetroTriangulo(lado_1, lado_2, lado_3);
+        alert(`El perimetro del triangulo es ${perimetro}`)
+    }
 
 }
 
 function calcularAreaTriangulo() {
 
     const input_1 = document.getElementById('inputLadoTriangulo1');
-    const lado_1 = Number(input_1.value);
+    const lado_1 = input_1.value;
     const input_2 = document.getElementById('inputLadoTriangulo2');
-    const lado_2 = Number(input_2.value);
-    const input_3 = document.getElementById('inputLadoTriangulo2');
-    const lado_3 = Number(input_3.value);
+    const lado_2 = input_2.value;
+    const input_3 = document.getElementById('inputLadoTriangulo3');
+    const lado_3 = input_3.value;
 
-    //validando que no este vacio. 
+    //Validando que los campos no esten vacios
+    if (lado_1 === "" || lado_2 === "" || lado_3 === "") {
+        alert(`Todos los campos deben de contener un numero`);
+    } else {
+        Number(lado_1);
+        Number(lado_2);
+        Number(lado_3);
+        const perimetro = areaTriangulo(lado_1, lado_2, lado_3);
+        alert(`El perimetro del triangulo es ${perimetro}`)
+    }
     
-    const area = areaTriangulo(lado_1, lado_2, lado_3);
-
-    alert(`El area del triangulo es ${area}`);
-
 }
 
 function calcularPerimetroCirculo() {
 
     const input_Radio = document.getElementById('inputRadioCirculo');
-    const radio = Number(input_Radio.value);
+    const radio = input_Radio.value;
 
-    const perimetro = perimetroCirculo(radio);
-
-    alert(`El perimetro del circulo es ${perimetro}`)
+    if (radio === "") {
+        alert(`El campo del circulo no debe de estar vacio`);
+    } else {
+        Number(radio);
+        const perimetro = perimetroCirculo(radio);
+        alert(`El perimetro del circulo es ${perimetro}`)
+    }
 
 }
 
 function calcularAreaCirculo() {
-
+    
     const input_Radio = document.getElementById('inputRadioCirculo');
-    const radio = Number(input_Radio.value);
+    const radio = input_Radio.value;
 
-    const area = areaCirculo(radio);
-
-    alert(`El area del circulo es ${area}`);
+    if (radio === "") {
+        alert(`El campo del circulo no debe de estar vacio`);
+    } else {
+        Number(radio);
+        const area = areaCirculo(radio);
+        alert(`El area del circulo es ${area}`);
+    }
 
 }
 
