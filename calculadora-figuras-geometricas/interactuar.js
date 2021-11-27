@@ -133,7 +133,7 @@ function calcularAreaTriangulo() {
         lado_2 = Number(lado_2);
         lado_3 = Number(lado_3);
         const area = areaTriangulo(lado_1, lado_2, lado_3);
-        alert(`El area del triangulo es ${area}`)
+        alert(`El area del triangulo es ${area}`);
     }
     
 }
