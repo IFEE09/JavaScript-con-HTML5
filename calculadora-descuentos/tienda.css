@@ -58,6 +58,15 @@ button:hover {
     border-radius: 10px;
 }
 
+.respuesta_Clase  {
+    color: #09794e;
+    font-weight: bold;
+    width: 10rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 footer {
     position: absolute;
     bottom: 0;

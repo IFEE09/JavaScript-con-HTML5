@@ -52,7 +52,7 @@ function perimetroCirculo(perimetro) {
 }
 
 function areaCirculo(radio) {
-    return (radio**2) * PI;
+    return (radio**2) * PI; 
 }
 
 /* console.log(`El radio de nuestro circulo es ${radioCirculo1}`);

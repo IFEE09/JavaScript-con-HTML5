@@ -3,6 +3,11 @@ function precioConDescuento(precio, descuento) {
     return ((100-descuento)/100) * precio;
 }
 
+function ocultarRespuesta() {
+    const respuesta = document.getElementById('respuesta');
+    respuesta.style.visibility = "hidden";
+}
+
 //interactuando con el html -------------------------------------------------------------------------
 function obtenerDescuento() {
     
@@ -11,7 +16,10 @@ function obtenerDescuento() {
 
     const input_Descuento = document.getElementById('descuento');
     let value_Descuento = input_Descuento.value;
-    
+
+    const resuesta = document.getElementById('respuesta');
+    respuesta.style.visibility = "visible";
+
     //validacion para saber si los campos estan vacios
     if(value_Precio === '' || value_Descuento === ''){
         Swal.fire({
@@ -24,6 +32,7 @@ function obtenerDescuento() {
         value_Descuento = Number(value_Descuento);
         value_Precio = Number(value_Precio);
 
+        //Validando que el descuento este entre 0 y 100
         if(value_Descuento < 0 || value_Descuento > 100) {
             Swal.fire({
                 icon: 'error',
@@ -31,12 +40,15 @@ function obtenerDescuento() {
             });
     
         } else {
+
             const value_PrecioConDescuento = precioConDescuento(value_Precio, value_Descuento);
-            Swal.fire({
-                icon: 'succes',
-                title: `El precio con descuento es ${value_PrecioConDescuento}`
-            });
+            
+            const respuesta = document.getElementById('respuesta');
+            respuesta.innerText = `El precio con descuento es ${value_PrecioConDescuento.toFixed(2)}`;
+
         }
+
+        setTimeout(ocultarRespuesta, 3000);
 
     }
 
