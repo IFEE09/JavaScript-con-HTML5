@@ -2,11 +2,15 @@ const lista1 = [
     100, 
     200,
     300,
-    500
+    500, 
+    100,
+    200,
+    300,
+    400, 
 ];
 
 
-function calcularMedia(lista) {
+function calcularPromedio(lista) {
 
     let sumaElementosLista;
 
@@ -28,5 +32,32 @@ function calcularMedia(lista) {
 
 }
 
+function calcularMedia(lista) {
 
-console.log(calcularMedia(lista1));
+    //Ordenando el array de menor a mayor. 
+    lista.sort(function(elemento1, elemento2) {
+        return elemento1 - elemento2;
+    });
+
+    console.log(lista);
+
+    //Se obtienen los elementos para determinar la media. 
+    if (lista.length % 2 == 0) {
+        const mitadLista_1 = (lista.length / 2);
+        const mitadLista_2 = (lista.length / 2) + 1;
+        return (lista[mitadLista_1] + lista[mitadLista_2]) / 2;
+        
+    } else {
+        const mitadLista = Math.ceil(lista.length / 2);
+        return lista[mitadLista];
+    }
+
+}
+
+function calcularModa(lista){
+    
+}
+
+
+console.log(calcularPromedio(lista1));
+calcularMedia(lista1);
