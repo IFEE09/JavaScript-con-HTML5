@@ -39,13 +39,13 @@ function obtenerDescuento() {
                 icon: 'error',
                 title: 'El descuento debe de estar entre 0 y 100'
             });
-            
+
         } else {
             const value_PrecioConDescuento = precioConDescuento(value_Precio, value_Descuento);
-            respuesta.innerText = `El precio con descuento es ${value_PrecioConDescuento.toFixed(2)}`;
+            respuesta.innerText = `El precio con descuento es $${value_PrecioConDescuento.toFixed(2)}`;
         }
 
-        setTimeout(ocultarRespuesta, 3000);
+        setTimeout(ocultarRespuesta, 4000);
 
     }
 
