@@ -6,7 +6,7 @@ const lista1 = [
     100,
     200,
     300,
-    400, 
+    400,
 ];
 
 
@@ -32,7 +32,7 @@ function calcularPromedio(lista) {
 
 }
 
-function calcularMedia(lista) {
+function calcularMediana(lista) {
 
     //Ordenando el array de menor a mayor. 
     lista.sort(function(elemento1, elemento2) {
@@ -60,4 +60,4 @@ function calcularModa(lista){
 
 
 console.log(calcularPromedio(lista1));
-calcularMedia(lista1);
+calcularMediana(lista1);
