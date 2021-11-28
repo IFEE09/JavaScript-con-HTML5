@@ -15,7 +15,9 @@
     <div class="bg-descuentos">
         <form action="">
             <h3>Calcula tu descuento</h3>
-            <input id="precio" type="number" placeholder="Precio original">
+            <label for="precio">$</label>
+            <input id="precio" type="number" placeholder="Precio original"> <br>
+            <label for="descuento">%</label>
             <input id="descuento" type="number" placeholder="Porcentaje del descuento">
             <button type="button" onclick="obtenerDescuento()">Calcula el precio con descuento</button>
             <p class="respuesta_Clase" id="respuesta"></p>

@@ -55,9 +55,10 @@ function calcularMediana(lista) {
 }
 
 function calcularModa(lista){
+
+    
     
 }
-
 
 console.log(calcularPromedio(lista1));
 calcularMediana(lista1);

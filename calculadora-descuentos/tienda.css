@@ -19,8 +19,7 @@ h3 {
     color: #020024;
 }
 
-input {
-    display: block;
+input {   
     margin: 0.8rem;
     padding: 0.4rem;
     text-align: center;

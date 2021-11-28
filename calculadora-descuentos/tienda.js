@@ -6,6 +6,8 @@ function precioConDescuento(precio, descuento) {
 function ocultarRespuesta() {
     const respuesta = document.getElementById('respuesta');
     respuesta.style.visibility = "hidden";
+    respuesta.innerText = '';
+    
 }
 
 //interactuando con el html -------------------------------------------------------------------------
@@ -28,7 +30,6 @@ function obtenerDescuento() {
         });
 
     } else {
-
         value_Descuento = Number(value_Descuento);
         value_Precio = Number(value_Precio);
 
@@ -38,14 +39,10 @@ function obtenerDescuento() {
                 icon: 'error',
                 title: 'El descuento debe de estar entre 0 y 100'
             });
-    
-        } else {
-
-            const value_PrecioConDescuento = precioConDescuento(value_Precio, value_Descuento);
             
-            const respuesta = document.getElementById('respuesta');
+        } else {
+            const value_PrecioConDescuento = precioConDescuento(value_Precio, value_Descuento);
             respuesta.innerText = `El precio con descuento es ${value_PrecioConDescuento.toFixed(2)}`;
-
         }
 
         setTimeout(ocultarRespuesta, 3000);
