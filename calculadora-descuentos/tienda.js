@@ -40,7 +40,4 @@ function obtenerDescuento() {
 
     }
 
-
-    
-
 }

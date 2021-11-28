@@ -57,3 +57,24 @@ button:hover {
     padding: 1.5rem;
     border-radius: 10px;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+footer a {
+    color: white;
+    font-size: 23px;
+}
+
+footer a:hover {
+    color: #0daf71;
+}
