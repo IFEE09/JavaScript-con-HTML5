@@ -1,3 +1,4 @@
+
 const lista1 = [
     100, 
     200,
@@ -7,6 +8,12 @@ const lista1 = [
     200,
     300,
     400,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
 ];
 
 
@@ -56,24 +63,24 @@ function calcularMediana(lista) {
 
 function calcularModa(lista){
 
-    let moda;
-    let modaFor;
-    let posicionModa;
+    let moda = 0; // s
+    let modaFor = moda; // m = s
+    let posicionModa;// a
 
     /*Se agarra la posicion i, iniciando en 0 y 
     se compara con todo el array en el siguiente for*/
     for(let i = 0; i < lista.length; i++) {
 
-        modaFor = 0;
+        moda = 0;
 
         for(let j = 0; j < lista.length; j++) {
 
             if(lista[i] == lista[j] && i != j){
-                modaFor += 1;
+                moda += 1;
             }
 
             if(moda >= modaFor) {
-                moda = modaFor;
+                modaFor = moda;
                 posicionModa = i;
             }
 
