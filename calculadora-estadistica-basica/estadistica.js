@@ -56,9 +56,34 @@ function calcularMediana(lista) {
 
 function calcularModa(lista){
 
-    
-    
+    let moda;
+    let modaFor;
+    let posicionModa;
+
+    /*Se agarra la posicion i, iniciando en 0 y 
+    se compara con todo el array en el siguiente for*/
+    for(let i = 0; i < lista.length; i++) {
+
+        modaFor = 0;
+
+        for(let j = 0; j < lista.length; j++) {
+
+            if(lista[i] == lista[j] && i != j){
+                modaFor += 1;
+            }
+
+            if(moda >= modaFor) {
+                moda = modaFor;
+                posicionModa = i;
+            }
+
+        }
+    }
+
+    return lista[posicionModa];
+  
 }
 
 console.log(calcularPromedio(lista1));
 calcularMediana(lista1);
+console.log(calcularModa(lista1));
