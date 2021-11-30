@@ -23,12 +23,19 @@ h1 {
     margin-bottom: 1rem;
 }
 
-h3 {
+#mostrar-lista {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 1rem;
     overflow: auto;
+    width: 25rem;
+    font-weight: bolder;
 }
 
-#mostrar-lista {
-    margin-top: 1rem;
+#cuenta-elementos {
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .bg-calcular {
@@ -54,7 +61,7 @@ center {
     border-radius: 5px;
     color: #3f5efb;
     padding: 0.1rem;
-    margin-bottom: 3.1rem;
+    margin-bottom: 3.5rem;
 }
 
 input, button {

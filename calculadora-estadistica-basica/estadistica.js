@@ -106,7 +106,8 @@ function agregarElemento() {
         elementos.push(elemento);
 
         mostrar_Lista.innerHTML = elementos;
-        cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`
+        cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
+        resultado.innerHTML = '';
 
     }
 
@@ -114,7 +115,7 @@ function agregarElemento() {
 
 function ocultarArrayCero() {
     cuenta_elementos.style.visibility = 'hidden';
-    cuenta_elementos.innerHTML = ""
+    cuenta_elementos.innerHTML = "";
 }
 
 function eliminarElemento() {
@@ -123,6 +124,7 @@ function eliminarElemento() {
     mostrar_Lista.innerHTML = elementos;
     cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
     cuenta_elementos.style.visibility = 'visible';
+    resultado.innerHTML = '';
 
     if(elementos.length === 0){
         setTimeout(ocultarArrayCero, 1500);
@@ -136,7 +138,6 @@ function reiniciar() {
     mostrar_Lista.innerHTML = elementos;
     cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
     cuenta_elementos.style.visibility = 'visible';
-    resultado.style.visibility = 'hidden';
 
     if(elementos.length === 0){
         setTimeout(ocultarArrayCero, 1500);
@@ -144,8 +145,9 @@ function reiniciar() {
 
 }
 
-function calcularPromedioElementos() 
-{
+function calcularPromedioElementos() {   
+
+    resultado.style.visibility = 'visible';
     if (elementos.length === 0) {
         Swal.fire({
             icon: 'error',
