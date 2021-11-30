@@ -1,20 +1,31 @@
 let elementos = [];
 let mostrar_Lista = document.getElementById('mostrar-lista');
 let cuenta_elementos = document.getElementById('cuenta-elementos');
+let resultado = document.getElementById('resultado');
+
+
+//Lista de prueba
+let lista2 = [
+    2,
+    3,
+    5,
+    6,
+    1,
+    9
+];
+
+console.log(calcularPromedio(lista2))
 
 function calcularPromedio(lista) {
 
     let sumaElementosLista;
 
-    /* for (let i = 0; i < lista.length; i++) {
-        sumaElementosLista += lista[i];
-    } */
-
     //funcion que devuelve la suma de los elementos del array
     sumaElementosLista = lista.reduce(
         
         function(sumaElementos = 0, elemento) {
-            return sumaElementos + elemento;
+            promedioFinal = Number(sumaElementos + elemento);
+            return promedioFinal;
         }
     
     );
@@ -81,7 +92,7 @@ function calcularModa(lista){
 function agregarElemento() {
 
     const input_elemento = document.getElementById('input-elemento');
-    const elemento = input_elemento.value;
+    let elemento = input_elemento.value;
     cuenta_elementos.style.visibility = 'visible';
 
     if(elemento === ''){
@@ -90,7 +101,8 @@ function agregarElemento() {
             title: 'El campo no debe de estar vacio'
         });
     } else {
-
+        
+        elemento = Number(elemento);
         elementos.push(elemento);
 
         mostrar_Lista.innerHTML = elementos;
@@ -102,6 +114,7 @@ function agregarElemento() {
 
 function ocultarArrayCero() {
     cuenta_elementos.style.visibility = 'hidden';
+    cuenta_elementos.innerHTML = ""
 }
 
 function eliminarElemento() {
@@ -130,3 +143,44 @@ function reiniciar() {
 
 }
 
+function calcularPromedioElementos() 
+{
+    if (elementos.length === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'La lista debe de contener al menos un elemento'
+        });
+    } else {
+        let promedio = calcularPromedio(elementos);
+        resultado.innerHTML = `El promedio de los elementos es ${promedio}`;
+    }
+
+}
+
+
+function calcularMedianaElementos() {
+
+    if (elementos.length === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'La lista debe de contener al menos un elemento'
+        });
+    } else {
+        let mediana = calcularMediana(elementos);
+        resultado.innerHTML = `La mediana de los elementos es ${mediana}`;
+    }
+
+}
+
+function  calcularModaElementos() {
+    if (elementos.length === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'La lista debe de contener al menos un elemento'
+        });
+    } else {
+        let moda = calcularModa(elementos);
+        resultado.innerHTML = `La moda de los elementos es ${moda}`;
+    }
+
+}

@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="./estadistica.css">
-    <title>Estadistica Basica</title>
+    <title>Estadística Básica</title>
 </head>
 <body>
     
     <h1>Promedio/Mediana/Moda</h1>
 
     <div class="bg-calcular">
-        <h2>Ingresa los elementos de una lista de numeros</h2>
+        <h2>Ingresa números</h2>
         <div>
-            <input id="input-elemento" type="number" placeholder="ingresar numero">
+            <input id="input-elemento" type="number" placeholder="ingresar número">
         </div>
         <button onclick="agregarElemento()">agregar</button>
         <button onclick="eliminarElemento()">eliminar</button>
         <button onclick="reiniciar()">reiniciar</button>
     </div>
 
-    <center>
-        <h3 class="lista-html" id="mostrar-lista">
-
-        </h3>
+    <center class="buttons-calculator">
+        <div id="mostrar-lista"></div>
         <h2 id="cuenta-elementos"></h2>
-        <button>Calcular promedio</button>
-        <button>Calcular Mediana</button>
-        <button>Calcular Mediana</button>
+        <button onclick="calcularPromedioElementos()">Calcular promedio</button>
+        <button onclick="calcularMedianaElementos()">Calcular Mediana</button>
+        <button onclick="calcularModaElementos()">Calcular Moda</button>
+        <h2 id="resultado"></h2>
     </center>
+
+    <footer>
+        Hecho por Ivan Farid Espadas Escalante <br> Repositorio <i class="fas fa-arrow-right"></i> &nbsp; <a target="_blank" href="https://github.com/IFEE09/JavaScript-con-HTML5"><i class="fab fa-github"></i></a>
+    </footer>
     
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./estadistica.js"></script>
