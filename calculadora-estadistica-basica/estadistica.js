@@ -138,6 +138,8 @@ function reiniciar() {
     mostrar_Lista.innerHTML = elementos;
     cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
     cuenta_elementos.style.visibility = 'visible';
+    resultado.style.visibility = 'hidden';
+    resultado.innerHTML = '';
 
     if(elementos.length === 0){
         setTimeout(ocultarArrayCero, 1500);
