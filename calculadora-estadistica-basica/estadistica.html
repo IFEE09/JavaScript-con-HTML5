@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estadistica.css">
     <title>Estadistica Basica</title>
 </head>
 <body>
     
-    <h1>Media/Promedio</h1>
+    <h1>Promedio/Mediana/Moda</h1>
 
+    <div class="bg-calcular">
+        <h2>Ingresa los elementos de una lista de numeros</h2>
+        <div>
+            <input id="input-elemento" type="number" placeholder="ingresar numero">
+        </div>
+        <button onclick="agregarElemento()">agregar</button>
+        <button onclick="eliminarElemento()">eliminar</button>
+        <button onclick="reiniciar()">reiniciar</button>
+    </div>
+
+    <center>
+        <h3 class="lista-html" id="mostrar-lista">
+
+        </h3>
+        <h2 id="cuenta-elementos"></h2>
+        <button>Calcular promedio</button>
+        <button>Calcular Mediana</button>
+        <button>Calcular Mediana</button>
+    </center>
+    
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./estadistica.js"></script>
 </body>
 </html>

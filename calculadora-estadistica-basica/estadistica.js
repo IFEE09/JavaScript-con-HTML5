@@ -1,21 +1,6 @@
-
-const lista1 = [
-    100, 
-    200,
-    300,
-    500, 
-    100,
-    200,
-    300,
-    400,
-    1000,
-    1000,
-    1000,
-    1000,
-    1000,
-    1000,
-];
-
+let elementos = [];
+let mostrar_Lista = document.getElementById('mostrar-lista');
+let cuenta_elementos = document.getElementById('cuenta-elementos');
 
 function calcularPromedio(lista) {
 
@@ -46,8 +31,6 @@ function calcularMediana(lista) {
         return elemento1 - elemento2;
     });
 
-    console.log(lista);
-
     //Se obtienen los elementos para determinar la media. 
     if (lista.length % 2 == 0) {
         const mitadLista_1 = (lista.length / 2);
@@ -61,11 +44,12 @@ function calcularMediana(lista) {
 
 }
 
+//funcion que recibe un array
 function calcularModa(lista){
 
-    let moda = 0; // s
-    let modaFor = moda; // m = s
-    let posicionModa;// a
+    let moda = 0;
+    let modaFor = moda;
+    let posicionModa;
 
     /*Se agarra la posicion i, iniciando en 0 y 
     se compara con todo el array en el siguiente for*/
@@ -79,7 +63,7 @@ function calcularModa(lista){
                 moda += 1;
             }
 
-            if(moda >= modaFor) {
+            if(moda >= modaFor) {  
                 modaFor = moda;
                 posicionModa = i;
             }
@@ -87,10 +71,62 @@ function calcularModa(lista){
         }
     }
 
+    //Devuelve la posicion mas repetida del array. 
     return lista[posicionModa];
   
 }
 
-console.log(calcularPromedio(lista1));
-calcularMediana(lista1);
-console.log(calcularModa(lista1));
+//-----------Intereccion con el HTML -----------------------------------------------------
+
+function agregarElemento() {
+
+    const input_elemento = document.getElementById('input-elemento');
+    const elemento = input_elemento.value;
+    cuenta_elementos.style.visibility = 'visible';
+
+    if(elemento === ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo no debe de estar vacio'
+        });
+    } else {
+
+        elementos.push(elemento);
+
+        mostrar_Lista.innerHTML = elementos;
+        cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`
+
+    }
+
+}
+
+function ocultarArrayCero() {
+    cuenta_elementos.style.visibility = 'hidden';
+}
+
+function eliminarElemento() {
+
+    elementos.pop();
+    mostrar_Lista.innerHTML = elementos;
+    cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
+    cuenta_elementos.style.visibility = 'visible';
+
+    if(elementos.length === 0){
+        setTimeout(ocultarArrayCero, 1500);
+    }
+
+}
+
+function reiniciar() {
+    
+    elementos = [];
+    mostrar_Lista.innerHTML = elementos;
+    cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
+    cuenta_elementos.style.visibility = 'visible';
+
+    if(elementos.length === 0){
+        setTimeout(ocultarArrayCero, 1500);
+    }
+
+}
+
