@@ -101,7 +101,7 @@ function agregarElemento() {
             title: 'El campo no debe de estar vacio'
         });
     } else {
-        
+
         elemento = Number(elemento);
         elementos.push(elemento);
 
@@ -136,6 +136,7 @@ function reiniciar() {
     mostrar_Lista.innerHTML = elementos;
     cuenta_elementos.innerHTML = `Existen ${elementos.length} elementos`;
     cuenta_elementos.style.visibility = 'visible';
+    resultado.style.visibility = 'hidden';
 
     if(elementos.length === 0){
         setTimeout(ocultarArrayCero, 1500);
